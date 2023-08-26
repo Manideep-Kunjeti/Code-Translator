@@ -4,23 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "server": "nodemon index.js",
+    "server": "node index.js",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
-    "dev": "concurrently \"npm run index\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm install &&  npm install --prefix client && npm run build --prefix client",
     "render-postbuild": "npm install && NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manideep-Kunjeti/Code-Translator.git"
+  },
   "author": "Manideep",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manideep-Kunjeti/Code-Translator/issues"
+  },
+  "homepage": "https://github.com/Manideep-Kunjeti/Code-Translator#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "path": "^0.12.7"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
   }
 }
