@@ -81,7 +81,7 @@ const App = () => {
       }
     }
     try {
-      const response = await fetch('http://localhost:5000/convert', options)
+      const response = await fetch('/convert', options)
       const data = await response.json()
       console.log(data)
       setLoading(false)
