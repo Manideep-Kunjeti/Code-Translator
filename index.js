@@ -103,7 +103,7 @@ app.post('/convert', async (req, res) => {
                 body: JSON.stringify({
                     model: 'gpt-3.5-turbo',
                     messages: [{ role: 'system', content: prompt }],
-                    max_tokens: 100
+                    max_tokens: 200
                 })
             })
         const data = await response.json()
